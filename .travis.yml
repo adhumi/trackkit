@@ -5,11 +5,11 @@ rvm:
 
 before_install:
   - gem install xcpretty -N --no-ri --no-rdoc
-  - gem install cocoapods -v '1.2.0' -N --no-ri --no-rdoc
+  - gem install cocoapods -v '1.5.3' -N --no-ri --no-rdoc
 
 script:
   - set -o pipefail
-  - xcodebuild test -workspace Example/TrackKit.xcworkspace -scheme Tests -destination "platform=iOS Simulator,name=iPhone 7" | xcpretty
+  - xcodebuild test -workspace Example/TrackKit.xcworkspace -scheme Tests -destination "platform=iOS Simulator,name=iPhone XR" | xcpretty
 
 deploy:
   skip_cleanup: true
